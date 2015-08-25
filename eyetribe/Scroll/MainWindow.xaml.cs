@@ -331,7 +331,7 @@ namespace Scroll
             return result;
         }
 
-        void thisDamnThing_MouseDown(object sender, MouseButtonEventArgs e)
+        void myTarget_MouseDown(object sender, MouseButtonEventArgs e)
         {
             Point pos = e.GetPosition(MyWindow);
             ActivateTouchPoint(pos);
@@ -529,14 +529,14 @@ namespace Scroll
                 case 0:
                     for (int i = 0; i < setSize; i++)
                     {
-                        Ellipse thisDamnThing = new Ellipse() { Width = 50, Height = 50 };
-                        thisDamnThing.Fill = Brushes.DarkGray;
-                        thisDamnThing.MouseDown += thisDamnThing_MouseDown;
+                        Ellipse myTarget = new Ellipse() { Width = 50, Height = 50 };
+                        myTarget.Fill = Brushes.DarkGray;
+                        myTarget.MouseDown += myTarget_MouseDown;
 
-                        Canvas.SetLeft(thisDamnThing, rnd.Next(windowWidth - (int)(thisDamnThing.Width)));
-                        Canvas.SetTop(thisDamnThing, rnd.Next(windowHeight - (int)(thisDamnThing.Height)));
+                        Canvas.SetLeft(myTarget, rnd.Next(windowWidth - (int)(myTarget.Width)));
+                        Canvas.SetTop(myTarget, rnd.Next(windowHeight - (int)(myTarget.Height)));
                         List<UIElement> listy = new List<UIElement>();
-                        listy.Add(thisDamnThing);
+                        listy.Add(myTarget);
                         elements.Add(listy);
                       //  set.target = Target.Circle;
                     }
@@ -545,34 +545,34 @@ namespace Scroll
                 case 1:
                     for (int i = 0; i < setSize; i++)
                     {
-                        Ellipse thisDamnThing = new Ellipse() { Width = 50, Height = 50 };
-                        thisDamnThing.Fill = Brushes.Transparent;
-                        thisDamnThing.MouseDown += thisDamnThing_MouseDown;
-                        thisDamnThing.Tag = "Crosshair";
+                        Ellipse myTarget = new Ellipse() { Width = 50, Height = 50 };
+                        myTarget.Fill = Brushes.Transparent;
+                        myTarget.MouseDown += myTarget_MouseDown;
+                        myTarget.Tag = "Crosshair";
 
-                        Canvas.SetLeft(thisDamnThing, rnd.Next(windowWidth - (int)(thisDamnThing.Width)));
-                        Canvas.SetTop(thisDamnThing, rnd.Next(windowHeight - (int)(thisDamnThing.Height)));
+                        Canvas.SetLeft(myTarget, rnd.Next(windowWidth - (int)(myTarget.Width)));
+                        Canvas.SetTop(myTarget, rnd.Next(windowHeight - (int)(myTarget.Height)));
 
                         Rectangle v = new Rectangle();
                         v.Tag = "Crosshair";
-                        v.Height = thisDamnThing.Height;
+                        v.Height = myTarget.Height;
                         v.Width = 2;
                         v.Fill = Brushes.Red;
-                        Canvas.SetTop(v, Canvas.GetTop(thisDamnThing));
-                        Canvas.SetLeft(v, Canvas.GetLeft(thisDamnThing) + .5 * thisDamnThing.Width - v.Width * .5);
+                        Canvas.SetTop(v, Canvas.GetTop(myTarget));
+                        Canvas.SetLeft(v, Canvas.GetLeft(myTarget) + .5 * myTarget.Width - v.Width * .5);
 
                         Rectangle h = new Rectangle();
                         h.Tag = "Crosshair";
                         h.Height = 2;
-                        h.Width = thisDamnThing.Width;
+                        h.Width = myTarget.Width;
                         h.Fill = Brushes.Red;
-                        Canvas.SetLeft(h, Canvas.GetLeft(thisDamnThing));
-                        Canvas.SetTop(h, Canvas.GetTop(thisDamnThing) + .5 * thisDamnThing.Height - h.Height * .5);
+                        Canvas.SetLeft(h, Canvas.GetLeft(myTarget));
+                        Canvas.SetTop(h, Canvas.GetTop(myTarget) + .5 * myTarget.Height - h.Height * .5);
 
                         List<UIElement> listy = new List<UIElement>();
                         listy.Add(h);
                         listy.Add(v);
-                        listy.Add(thisDamnThing);
+                        listy.Add(myTarget);
                         elements.Add(listy);
                      //   set.target = Target.Crosshair;
 
@@ -582,14 +582,14 @@ namespace Scroll
                 case 2:
                     for (int i = 0; i < setSize; i++)
                     {
-                        Ellipse thisDamnThing = new Ellipse() { Width = 50, Height = 50 };
-                        thisDamnThing.Fill = Brushes.DarkGray;
-                        thisDamnThing.MouseDown += thisDamnThing_MouseDown;
+                        Ellipse myTarget = new Ellipse() { Width = 50, Height = 50 };
+                        myTarget.Fill = Brushes.DarkGray;
+                        myTarget.MouseDown += myTarget_MouseDown;
 
-                        Canvas.SetLeft(thisDamnThing, rnd.Next(windowWidth - (int)(thisDamnThing.Width)));
-                        Canvas.SetTop(thisDamnThing, rnd.Next(windowHeight - (int)(thisDamnThing.Height)));
+                        Canvas.SetLeft(myTarget, rnd.Next(windowWidth - (int)(myTarget.Width)));
+                        Canvas.SetTop(myTarget, rnd.Next(windowHeight - (int)(myTarget.Height)));
                         List<UIElement> listy = new List<UIElement>();
-                        listy.Add(thisDamnThing);
+                        listy.Add(myTarget);
                         elements.Add(listy);
                         //set.target = Target.Circle;
 
@@ -599,34 +599,34 @@ namespace Scroll
                 case 3:
                     for (int i = 0; i < setSize; i++)
                     {
-                        Ellipse thisDamnThing = new Ellipse() { Width = 50, Height = 50 };
-                        thisDamnThing.Fill = Brushes.Transparent;
-                        thisDamnThing.MouseDown += thisDamnThing_MouseDown;
-                        thisDamnThing.Tag = "Crosshair";
+                        Ellipse myTarget = new Ellipse() { Width = 50, Height = 50 };
+                        myTarget.Fill = Brushes.Transparent;
+                        myTarget.MouseDown += myTarget_MouseDown;
+                        myTarget.Tag = "Crosshair";
 
-                        Canvas.SetLeft(thisDamnThing, rnd.Next(windowWidth - (int)(thisDamnThing.Width)));
-                        Canvas.SetTop(thisDamnThing, rnd.Next(windowHeight - (int)(thisDamnThing.Height)));
+                        Canvas.SetLeft(myTarget, rnd.Next(windowWidth - (int)(myTarget.Width)));
+                        Canvas.SetTop(myTarget, rnd.Next(windowHeight - (int)(myTarget.Height)));
 
                         Rectangle v = new Rectangle();
                         v.Tag = "Crosshair";
-                        v.Height = thisDamnThing.Height;
+                        v.Height = myTarget.Height;
                         v.Width = 2;
                         v.Fill = Brushes.Red;
-                        Canvas.SetTop(v, Canvas.GetTop(thisDamnThing));
-                        Canvas.SetLeft(v, Canvas.GetLeft(thisDamnThing) + .5 * thisDamnThing.Width - v.Width * .5);
+                        Canvas.SetTop(v, Canvas.GetTop(myTarget));
+                        Canvas.SetLeft(v, Canvas.GetLeft(myTarget) + .5 * myTarget.Width - v.Width * .5);
 
                         Rectangle h = new Rectangle();
                         h.Tag = "Crosshair";
                         h.Height = 2;
-                        h.Width = thisDamnThing.Width;
+                        h.Width = myTarget.Width;
                         h.Fill = Brushes.Red;
-                        Canvas.SetLeft(h, Canvas.GetLeft(thisDamnThing));
-                        Canvas.SetTop(h, Canvas.GetTop(thisDamnThing) + .5 * thisDamnThing.Height - h.Height * .5);
+                        Canvas.SetLeft(h, Canvas.GetLeft(myTarget));
+                        Canvas.SetTop(h, Canvas.GetTop(myTarget) + .5 * myTarget.Height - h.Height * .5);
 
                         List<UIElement> listy = new List<UIElement>();
                         listy.Add(h);
                         listy.Add(v);
-                        listy.Add(thisDamnThing);
+                        listy.Add(myTarget);
                         elements.Add(listy);
                        // set.target = Target.Crosshair;
 
